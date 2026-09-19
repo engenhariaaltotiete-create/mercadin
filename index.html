@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="description" content="Lista de compras mobile-first com histórico e acompanhamento durante a compra." />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Compras</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MINHAS COMPRAS</p>
+        <h1 id="pageTitle">Nova lista</h1>
+      </div>
+      <div class="top-actions"><div id="syncStatus" class="sync-status">Ainda não sincronizado</div><button id="refreshBtn" class="icon-btn" type="button" aria-label="Atualizar dados" title="Atualizar agora">↻</button><button id="installBtn" class="icon-btn hidden" type="button" aria-label="Instalar aplicativo" title="Instalar aplicativo">↓</button></div>
+    </header>
+
+    <main id="app" class="content" aria-live="polite"></main>
+
+    <nav class="bottom-nav" aria-label="Navegação principal">
+      <button class="nav-btn active" data-route="new" type="button">
+        <span class="nav-icon">＋</span><span>Nova</span>
+      </button>
+      <button class="nav-btn" data-route="pending" type="button">
+        <span class="nav-icon">☐</span><span>Pendentes</span>
+        <span id="pendingBadge" class="badge hidden">0</span>
+      </button>
+      <button class="nav-btn" data-route="archive" type="button">
+        <span class="nav-icon">▤</span><span>Arquivo</span>
+      </button>
+      <button class="nav-btn" data-route="library" type="button">
+        <span class="nav-icon">⌕</span><span>Biblioteca</span>
+      </button>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="modalRoot"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 const CONFIG = {
   // Depois de publicar o Apps Script como Web App, cole aqui a URL terminada em /exec.
-  APPS_SCRIPT_URL: '',
+  APPS_SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbyy_J5xotMuj-i4b5UJ-5qS-KfjyhFlHi2Lg3PdxWNcOwJCi7gEV4uB6L5jeNjLT_ROIQ/exec',
   USE_LOCAL_FALLBACK: true,
   SYNC_INTERVAL_MS: 30 * 60 * 1000
 };
